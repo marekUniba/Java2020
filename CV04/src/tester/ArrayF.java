@@ -31,7 +31,7 @@ public class ArrayF implements FrontInterface {
     public String dequeue() {
         String out = elems[0];
         if (isEmpty()) {
-            return "ArrayF is empty";
+            return "Autorske.ArrayF is empty";
         }
         for (int i = 0; i < tip+1; i++) {
             elems[i] = elems[i+1];

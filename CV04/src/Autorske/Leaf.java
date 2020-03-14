@@ -1,3 +1,5 @@
+package Autorske;
+
 public class Leaf extends Tree {
     int value;
 
@@ -31,18 +33,7 @@ public class Leaf extends Tree {
     boolean isUnique() {
         return true;
     }
-    /**
-     * prvky v ľavom podstrome sú menšie alebo rovné ako prvky v pravom podstrome, a to pre každý vnútorný vrchol
-     */
-    @Override
-    boolean isOrdered() {
-        return true;
-    }
-    @Override
-    public String toString() {
-        return "["+value+"]";
-    }
-    //-------- pomocne
+
     @Override
     boolean equalsTo(int x) {
         return value == x;
@@ -51,5 +42,18 @@ public class Leaf extends Tree {
     @Override
     Integer preorder(Integer min) {
         return (min != null && min <= value)?value:null;
+    }
+
+    /**
+     * prvky v ľavom podstrome sú menšie alebo rovné ako prvky v pravom podstrome, a to pre každý vnútorný vrchol
+     */
+    @Override
+    boolean isOrdered() {
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "["+value+"]";
     }
 }

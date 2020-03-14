@@ -1,4 +1,4 @@
-class A { // trieda A so svojimi metódami, default.konštruktor
+class A {
 	public void doA() {
 	}
 }

@@ -1,4 +1,4 @@
-// https://www.youtube.com/watch?v=jhifjOA9Zq0
+package Autorske;
 
 abstract class Tree {
     abstract int depth();        // hĺbka stromu, hľbka listu je 0, hľbka stromu je 1+max(left, right)
@@ -6,7 +6,6 @@ abstract class Tree {
     abstract boolean isUnique(); // platí, ak všetky hodnoty (v listoch stromu) sú rovnaké
     abstract boolean isOrdered();  // prvky v ľavom podstrome sú menšie alebo rovné ako prvky v pravom podstrome, a to pre každý vnútorný vrchol
 
-    //-------- pomocne
     abstract boolean equalsTo(int tree);    // pomocná funkcia pre isUnique
     abstract Integer preorder(Integer min); // pomocná funkcia pre isOrdered
 
