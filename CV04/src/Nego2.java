@@ -1,6 +1,33 @@
 package tester;
 
 public class Nego2 {
+    //https://torstencurdt.com/tech/posts/modulo-of-negative-numbers
+    //https://stackoverflow.com/questions/11720656/modulo-operation-with-negative-numbers
+    //https://en.wikipedia.org/wiki/Modulo_operation
+    private static int mymodulo(int a, int b) {
+        //return a < 0 ? b-1 - (-a-1) % b : a % b;
+        //return  (((a % b) + b) % b);
+        int m = a % b;
+        if (m < 0) {
+            // m += (b < 0) ? -b : b; // avoid this form: it is UB when b == INT_MIN
+            m = (b < 0) ? m - b : m + b;
+        }
+        return m;
+    }
+    private static int mydiv(int a, int b) {
+        return (a-mymodulo(a,b))/b;
+    }
+
+    public static String toNego1(int i) {
+        final int base = -2;
+        String res = "";
+        while (i != 0) {
+            int m = mymodulo(i, base);
+            res = "" + m + res;
+            i = (i-m)/base;
+        }
+        return res;
+    }
 
     public static String toNego(int i) {
         String binary = "";
@@ -39,6 +66,11 @@ public class Nego2 {
     }
 
     public static void main(String[] args) {
+        System.out.println(mymodulo(-1,-2));
+        System.out.println(mydiv(-1,-2));
+        System.out.println(Nego2.toNego1(2));
+
+
         System.out.println(Nego2.fromNego("110"));
         System.out.println(Nego2.fromNego("11011"));
         System.out.println(Nego2.fromNego("1100"));
