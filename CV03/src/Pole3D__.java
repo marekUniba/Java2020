@@ -4,15 +4,16 @@ public class Pole3D__ {
     public static <T> boolean obeNull(T[] a, T[] b) {
         return a == null && b == null;
     }
-    public static boolean obeNull(String a, String b) {
-        return a == null && b == null;
-    }
     // genericka staticka metoda
     public static <T> boolean roznePolia(T[] a, T[] b) {
         if (a == null && b == null) return false;
         if (a == null && b != null) return true;
         if (a != null && b == null) return true;
         return a.length != b.length;
+    }
+    //---
+    public static boolean obeNull(String a, String b) {
+        return a == null && b == null;
     }
     public static boolean rozneRetazce(String a, String b) {
         if (a == null && b == null) return false;
