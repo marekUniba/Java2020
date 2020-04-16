@@ -16,9 +16,7 @@ public class State implements Serializable {
                     if (playground[i][j] == 1)
                         for(int a=-1; a <= 1; a++)
                             for(int b=-1; b <= 1; b++)
-                                if (a*b != 0)
-                                    continue;
-                                else
+                                if (a*b == 0)
                                     playground[i+a][j+b] = 1-playground[i+a][j+b];
         }
     }
