@@ -1,3 +1,7 @@
+/**
+ * zdroj: https://gist.github.com/james-d/8327842
+ */
+
 import static java.lang.Math.PI;
 import static java.lang.Math.cos;
 import static java.lang.Math.sin;
@@ -44,7 +48,7 @@ import javafx.stage.Stage;
 public class BouncingBalls extends Application {
 
 	private ObservableList<Ball> balls = FXCollections.observableArrayList();
-	private static final int NUM_BALLS = 40;
+	private static final int NUM_BALLS = 400;
 	private static final double MIN_RADIUS = 5;
 	private static final double MAX_RADIUS = 15;
 	private static final double MIN_SPEED = 50;
@@ -98,6 +102,7 @@ public class BouncingBalls extends Application {
 
 		final Scene scene = new Scene(root, 800, 600);
 		primaryStage.setScene(scene);
+		primaryStage.setTitle("Boundcing balls");
 		primaryStage.show();
 
 		startAnimation(ballContainer);
