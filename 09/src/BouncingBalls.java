@@ -1,5 +1,3 @@
-
-
 import static java.lang.Math.PI;
 import static java.lang.Math.cos;
 import static java.lang.Math.sin;
@@ -92,10 +90,11 @@ public class BouncingBalls extends Application {
 		createBalls(NUM_BALLS, MIN_RADIUS, MAX_RADIUS, MIN_SPEED, MAX_SPEED,
 				400, 300);
 		final BorderPane root = new BorderPane();
-		final Label stats = new Label();
-		stats.textProperty().bind(frameStats.textProperty());
+// VM Options: --module-path "c:\Program Files\Java\javafx-sdk-11.0.2\lib" --add-modules=javafx.controls,javafx.fxml
+//		final Label stats = new Label("aaa");
+//		stats.textProperty().bind(frameStats.textProperty());
 		root.setCenter(ballContainer);
-		root.setBottom(stats);
+//		root.setBottom(stats);
 
 		final Scene scene = new Scene(root, 800, 600);
 		primaryStage.setScene(scene);
