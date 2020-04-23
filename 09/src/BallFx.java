@@ -41,7 +41,7 @@ public class BallFx extends Application {
 */
 		
 		Timeline animation = new Timeline(new KeyFrame(Duration.millis(10), 
-			x -> {
+			e -> {
 				balls.update();
 				balls.paintBallPane();
 			}));

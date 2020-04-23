@@ -13,7 +13,7 @@ import java.util.Random;
 import static javax.swing.text.html.parser.DTDConstants.NUMBER;
 
 public class CoronaFx extends Application {
-	final static int NUMBER = 50;
+	final static int NUMBER = 100;
 	static CoronaState cs = new CoronaState();
 	final static Random rnd = new Random();
 
@@ -40,7 +40,8 @@ class CoronaState {
 	public CoronaState() {
 		threads = new ArrayList<CoronaThread>();
 	}
-	//synchronized
+
+	synchronized
 	public void addNew(CoronaThreadPanel cp, int w, int h) {
 		//System.out.println("new " + threads.size());
 		for(;;) {
@@ -60,7 +61,7 @@ class CoronaState {
 			}
 		}
 	}
-	//synchronized
+	synchronized
 	public boolean checkCollisions(CoronaThread cth) {
 		for (CoronaThread th : threads) {
 			if (th != cth && !th.dead)

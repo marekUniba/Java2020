@@ -12,9 +12,9 @@ import javafx.stage.Stage;
 public class ManyBallsAnimationTimerFx  extends Application {
 	static long frameCnt, lasttimeNano;
 	//final static int SIZE = 2;
-	final static int SIZE = 100;
+	//final static int SIZE = 100;
 	//final static int SIZE = 1000;
-	//final static int SIZE = 10000;
+	final static int SIZE = 10000;
 
 	@Override
 	public void start(Stage primaryStage) {
