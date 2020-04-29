@@ -1,16 +1,16 @@
 import java.util.Random;
 
 
-public class Lopata1 {
+public class LopataWN {
 	final static int N = 5;  // pocet lopat
 	final static int R = 10;	 // pocet robotnikov
 	private int pocetLopatNaZemi;
 	
-	public Lopata1(int pocetLopatNaZemi){
+	public LopataWN(int pocetLopatNaZemi){
 		this.pocetLopatNaZemi = pocetLopatNaZemi;
 	}
 	public static void main(String[] args) {
-		Lopata1 lop = new Lopata1(N);
+		LopataWN lop = new LopataWN(N);
 		for (int i = 0; i < R; i++){
 			new Robotnik1(i, lop).start();
 		}
@@ -34,9 +34,9 @@ public class Lopata1 {
 
 class Robotnik1 extends Thread {
 	private int id;
-	private Lopata1 lopata;
+	private LopataWN lopata;
 	private int odrobene = 0;
-	public Robotnik1(int id,Lopata1 lop){
+	public Robotnik1(int id, LopataWN lop){
 		this.id = id;
 		lopata = lop;
 	}

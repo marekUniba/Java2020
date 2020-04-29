@@ -1,5 +1,3 @@
-
-
 import java.util.LinkedList;
 import java.util.Random;
 
@@ -20,7 +18,7 @@ public class Jama {
 		
 		// vyrobime robotnikov
 		for (int i = 0; i < m; i++) {
-			new Thread(Integer.toString(i)) {
+			new Thread(""+i) {
 				private Lopata moja;
 				public void run() {
 					Random r = new Random();
