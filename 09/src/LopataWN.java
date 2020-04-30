@@ -19,7 +19,7 @@ public class LopataWN {
 	public synchronized void zoberLopatu(){
 		if (pocetLopatNaZemi==0){
 			try {
-				wait();
+				this.wait();
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}

@@ -1,3 +1,5 @@
+package Priprava;
+
 import java.util.Random;
 
 public class Rieky {
