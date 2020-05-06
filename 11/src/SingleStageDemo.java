@@ -1,11 +1,17 @@
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
+
+import javax.swing.text.EditorKit;
 
 public class SingleStageDemo extends Application {
 	@Override
@@ -13,6 +19,12 @@ public class SingleStageDemo extends Application {
 		try {
 			Button btn = new Button("Press me !");
 			Pane root = new Pane(btn);
+			//root.getChildren().add
+			//Rectangle r = new Rectangle(0,0,100,100);
+			// Button b = new Button();
+			// new TextField()
+			//new TextArea()
+			//new TextField
 			// 1.moznost
 			root.setStyle("-fx-background-color: #" + "FFFF00");
 			// 2.moznost			
